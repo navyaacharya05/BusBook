@@ -1,6 +1,5 @@
 import React from 'react';
-import { Navbar } from './Navbar';
-import {Menu} from './Menu';
+import {Home} from './Home';
 import {Scroll} from './Scroll';
 
 //import {BrowserRouter, Route, Routes} from 'react-router-dom'
@@ -8,8 +7,8 @@ import {Scroll} from './Scroll';
 const App=()=>{
   return(
     <>
-      <Navbar/>
-      <Menu/>
+      
+      <Home/>
       <Scroll/>
     </>
   )

@@ -2,19 +2,22 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { Carousel } from "react-bootstrap";
 import { Card} from "react-bootstrap";
-import { height } from '@mui/system';
+
+
+
+
 
 export const Scroll=()=>{
+    
     return(
         
         <>
-        <center><Card style={{ width: '50rem', height:'200px'}}>
+        <center><Card style={{ width: '50rem', height:'100px',}}>
             <Card.Body>
                 <Card.Title>Website</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">React Js</Card.Subtitle>
                     <Card.Text>
                     React is a declarative, efficient, and flexible JavaScript library for building user interfaces. 
-                    It lets you compose complex UIs from small and isolated pieces of code called “components”.
                     </Card.Text>
                 {/*<Card.Link href="#">Card Link</Card.Link>
                 <Card.Link href="#">Another Link</Card.Link>*/}

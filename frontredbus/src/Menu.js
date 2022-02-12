@@ -1,38 +1,46 @@
 import React from "react";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import FormControl from '@mui/material/FormControl';
+import {Navbar, Nav,NavDropdown} from "react-bootstrap";
+import PermIdentitySharpIcon from '@mui/icons-material/PermIdentitySharp';
 
-export const Menu=()=>{
+const Menu=()=>{
     return(
         <>
-         <div className="mt-4 container">
-            <h1 className="display-2 text-center text-info"></h1>
-                <div className="row justify-content-center">
-                    <div className="col-lg-6 col-md-8 col-sm-12 shadow-lg p-3">
-                     {/*added text fields Menu.js*/}
-                        <Box sx={{ '& > :not(style)': { m: 1 } }}>
-                        <FormControl variant=""></FormControl>
-                            <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                                <TextField id="input-with-sx" label="From" variant="standard" />
-                                <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                                <TextField id="input-with-sx" label="To" variant="standard" />
-                                <input type="date" 
-                                 className="form-control mt-1" 
-                                 />
-                                {/*<AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                                <TextField id="input-with-sx" label="Date" variant="standard" />*/}
-                                {/* Added search button*/}
-                                <Button variant="outlined" href="#outlined-buttons">Search</Button>
-                            </Box>
-                        </Box>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+        <Navbar bg="danger" variant="info">
+                <div className="container">
+                    <Navbar.Brand href="/home">
+                    <img
+                        src="../pictures/redbus_logo.png"
+                        width="70"
+                        height="60"
+                        className="d-inline-block align-top"
+                        alt="Redbus logo"
+                    />
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                      <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                          <Nav.Link href="#bustickets">Bus Tickets</Nav.Link>
+                          <Nav.Link href="#rydenew">RydeNew</Nav.Link>
+                          <Nav.Link href="#redram">redRam</Nav.Link>
+                          <Nav.Link href="#rpool">rPool</Nav.Link>
+                        </Nav>
+             
+                        <Nav.Link  href="#pricing">help</Nav.Link>
+                          <NavDropdown  title="Manage Booking" id="collasible-nav-help">
+                            <NavDropdown.Item href="#action/3.1">Bus Tickets</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">Cancel</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Change Travel Date</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.4">Show My Ticket</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.5">Emails/SMS</NavDropdown.Item>
+                            </NavDropdown>
+                            <PermIdentitySharpIcon/><NavDropdown  title="" id="collasible-nav-help">
+                            <NavDropdown.Item href="#action/3.1">SignIn/SignUp</NavDropdown.Item>
+                          </NavDropdown>
+                      </Navbar.Collapse>
+              </div>
+      </Navbar>
+      </>
+    );
 }
+export default Menu;
+
