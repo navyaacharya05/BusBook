@@ -10,6 +10,7 @@ public class Busbook
 	private int busId;
 	private String busNo;
 	private String source, destination;
+	
 	public int getBusId() {
 		return busId;
 	}

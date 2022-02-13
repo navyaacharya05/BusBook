@@ -11,6 +11,7 @@ public class Passengers
 	private int passengerId;
 	private String Name, contactNo;
 	private int age;
+	
 	public int getPassengerId() {
 		return passengerId;
 	}
