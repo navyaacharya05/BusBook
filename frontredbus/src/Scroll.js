@@ -3,10 +3,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { Carousel } from "react-bootstrap";
 import { Card} from "react-bootstrap";
 
-
-
-
-
 export const Scroll=()=>{
     
     return(
